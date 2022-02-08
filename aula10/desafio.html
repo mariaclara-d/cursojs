@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+
+    <style>
+        body {
+            background-color: rgb(186, 142, 228);
+            font: normal 18pt Arial;
+
+
+        }
+
+        h1 {
+            color: black;
+
+
+        }
+
+        input {
+
+            font-weight: 800;
+            color: black;
+            width: 200px;
+        }
+
+        div#res {
+
+            margin-top: 10px;
+            color: black;
+            font-weight: 800;
+        }
+
+        main {
+            background:rgb(166, 90, 238);
+            height: 250px;
+            width: 550px;
+            margin: 200px 200px 200px 400px;
+            padding-top: 30px;
+            padding-left: 65px;
+            padding-right: 45px;
+            padding-bottom: 30px;
+            
+            border-radius: 10px;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>De onde você veio?</h1>
+
+        <input type="text" name="txt1" id="txt1">
+
+        <input type="button" value="Enviar" onclick="enviar()">
+
+        <div id="res"></div>
+    </main>
+
+
+    <script>
+        function enviar() {
+
+            var txt = document.querySelector('input#txt1')
+            var res = document.querySelector('div#res')
+            var país = txt.value
+
+            res.innerHTML = `Vivendo em ${país}.`
+
+            if (país == 'Brasil') {
+                res.innerHTML += '<p>Você é brasileiro!</p>'
+            } else {
+                res.innerHTML += '<p>Você é estrangeiro!</p>'
+            }
+
+        }
+    </script>
+</body>
+
+</html>
